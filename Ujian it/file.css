@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.site-header {
+  background-color: #111827;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h2 {
+  margin: 0;
+  color: #60a5fa;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navbar a:hover {
+  color: #bfdbfe;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px 48px;
+}
+
+.hero {
+  background: linear-gradient(135deg, #dbeafe, #f8fafc);
+  border-radius: 18px;
+  padding: 60px 24px;
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0 0 16px;
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.hero p {
+  margin: 0 auto 24px;
+  max-width: 700px;
+  font-size: 1.05rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #2563eb;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: #1d4ed8;
+}
+
+.artikel-section h2,
+.kategori-section h2 {
+  margin: 0 0 20px;
+  font-size: 2rem;
+}
+
+.artikel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.artikel-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.artikel-card.featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  align-items: stretch;
+}
+
+.artikel-card.featured img {
+  height: 100%;
+  min-height: 280px;
+  object-fit: cover;
+}
+
+.artikel-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.artikel-content {
+  padding: 20px;
+}
+
+.artikel-content h3 {
+  margin: 0 0 12px;
+  font-size: 1.5rem;
+}
+
+.artikel-content p {
+  margin: 0 0 18px;
+  color: #4b5563;
+}
+
+.kategori-section {
+  margin-top: 40px;
+}
+
+.kategori-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.kategori-list span {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.site-footer {
+  background-color: #111827;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .artikel-card.featured {
+    grid-template-columns: 1fr;
+  }
+}
